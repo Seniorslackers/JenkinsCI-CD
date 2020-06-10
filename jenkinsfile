@@ -1,11 +1,11 @@
 #!Groovy
 @Library('jenkins-CD/CD')
 
-//def tools = new.org.devops.tools()
+def tools = new.org.devops.tools()
 
 
 //
-pipeline{
+pipline{
     agent   { node {label "master
                   customworkspace "$workspace"
                    }
