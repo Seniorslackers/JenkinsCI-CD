@@ -1,7 +1,7 @@
 #!Groovy
 @Library('jenkins-CD/CD')
 
-def tools = new.org.devops.tools()
+//def tools = new.org.devops.tools()
 
 
 //
