@@ -5,7 +5,7 @@
 
 
 //
-pipline{
+pipeline{
     agent   { node {label "master
                   customworkspace "$workspace"
                    }
