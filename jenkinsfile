@@ -5,20 +5,34 @@
 
 
 //打印信息
+
 pipeline{
-    agent   { node {label "master
-                  customworkspace "$workspace"
-                   }
-            }
+agent any
+stages{
+    stage("GetCode"){
+        //steps  
+    }
+        
+    stage("build"){
+       //step
+    }
+    
+}
+
+}
+
     options {
         timestamps()  //日志时间
         skipDefaultCheckout（） //删除隐式checkout scm语句
         disableConcurrentBuilds（） //禁止并行
         timeout（time：1，unit:'HOURS'） //流水线超时设置
     }
+}
 stages {
     //
 }
+    }
+    }
 
 }
 post {
