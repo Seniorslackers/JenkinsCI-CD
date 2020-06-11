@@ -36,7 +36,7 @@ pipeline {
 
                 //Pakeges Construct//
 
-                stage"Build"){
+                stage（"Build"){
                     steps{
                         timeout(time:20, unit:"MINUTES"){
                             script{
