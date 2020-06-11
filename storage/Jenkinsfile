@@ -30,7 +30,7 @@ pipeline {
                 }
             }
         }   
-    }
+    
          stage("Project Pakeges"){
             failFast true
             parallel {
@@ -63,7 +63,6 @@ pipeline {
             }
         }
     } 
-}
        //End of construction information
     post {
         always {
@@ -87,3 +86,4 @@ pipeline {
             }
         }
     }
+}
