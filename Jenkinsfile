@@ -1,8 +1,9 @@
 #!groovy
 @Library("jenkinsLibrary@master") _
 def tools = new org.devops.tools()
-Hello ()
+
 pipeline {
+   
    agent any
    stages {
       stage('Hello') {
