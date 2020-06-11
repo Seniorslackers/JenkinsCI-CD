@@ -10,7 +10,7 @@ pipeline {
          
             echo 'Hello World'
                script{ 
-               def tools.PrintMes('niho')
+               tools.PrintMes("获取代码","green")
                }
             }   
          }
