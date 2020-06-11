@@ -30,11 +30,10 @@ pipeline {
                 }
             }
         }
+    }
         stage("Project Pakeges"){
             failFast true
             parallel {
-
-                //Pakeges Construct//
 
                 stage（"Build"){
                     steps{
