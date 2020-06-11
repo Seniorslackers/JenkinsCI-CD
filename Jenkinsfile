@@ -6,10 +6,12 @@ String workspace = "/opt/jenkins/workspace"
 
 //Pipeline
 pipeline {
-    agent { any {  label "master"   //指定运行节点的标签或者名称
-                    customWorkspace "${workspace}"   //指定运行工作目录（可选）
-            }
-    }
+    agent any
+    //{any {  label "master"   //指定运行节点的标签或者名称
+    //                customWorkspace "${workspace}"   //指定运行工作目录（可选）
+    //        }
+    //}
+   
 
     options {
         timestamps()  //日志会有时间
@@ -21,7 +23,7 @@ pipeline {
     stages {
         //下载代码
         stage("GetCode"){ //阶段名称
-            //when { environment name: 'test', value: 'abcd' }
+            when { environment name: 'test', value: 'abcd' }
             steps{  //步骤
                 timeout(time:5, unit:"MINUTES"){   //步骤超时时间
                     script{ //填写运行代码
