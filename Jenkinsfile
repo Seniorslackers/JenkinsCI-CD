@@ -1,5 +1,5 @@
 #!groovy
-@Library('jenkins-devops') _
+@Library('jenkinsLibrary') _
 def tools = new org.devops.tools()
 //Hello ()
 pipeline {
@@ -9,7 +9,7 @@ pipeline {
          steps {
             echo 'Hello World'
                script{ 
-               tools.PrintMes （ "this is my pipeline"）
+               tools.PrintMes()
                }
             
          }
