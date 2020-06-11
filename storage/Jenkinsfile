@@ -35,7 +35,7 @@ pipeline {
             failFast true
             parallel {
 
-                stage（"Build"){
+                 stage("Build"){
                     steps{
                         timeout(time:20, unit:"MINUTES"){
                             script{
