@@ -63,6 +63,7 @@ pipeline {
             }
         }
     } 
+}
        //End of construction information
     post {
         always {
@@ -86,4 +87,3 @@ pipeline {
             }
         }
     }
-}
