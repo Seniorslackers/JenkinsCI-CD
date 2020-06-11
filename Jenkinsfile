@@ -1,4 +1,4 @@
-#！groovy
+#!groovy
 @Library('jenkins-devops')_
 def tools = new org.devops.tools()
 pipeline {
