@@ -10,7 +10,7 @@ pipeline {
          
             echo 'Hello World'
                script{ 
-               tools.PrintMes()
+               def tools.PrintMes()
                }
             }   
          }
