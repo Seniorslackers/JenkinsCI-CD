@@ -8,7 +8,10 @@ pipeline {
       stage('Hello') {
          steps {
             echo 'Hello World'
-            tools.PrintMes （ "this is my pipeline"）
+               script{ 
+               tools.PrintMes （ "this is my pipeline"）
+               }
+            
          }
       }
    }
