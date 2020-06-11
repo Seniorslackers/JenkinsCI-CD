@@ -24,13 +24,13 @@ pipeline {
         //下载代码
         stage("GetCode"){ //阶段名称
             steps{  //步骤
-                timeout(time:5, unit:"MINUTES"){   //步骤超时时间
+                //timeout(time:5, unit:"MINUTES"){   //步骤超时时间
                     script{ //填写运行代码
                         println('获取代码')
                         tools.PrintMes("获取代码",'blue')
-                        println("${test}")
+                        //println("${test}")
                         
-                        input id: 'Test', message: '我们是否要继续？', ok: '是，继续吧！', parameters: [choice(choices: ['a', 'b'], description: '', name: 'test1')], submitter: 'lizeyang,admin'
+                        //input id: 'Test', message: '我们是否要继续？', ok: '是，继续吧！', parameters: [choice(choices: ['a', 'b'], description: '', name: 'test1')], submitter: 'lizeyang,admin'
                     }
                 }
             }
@@ -43,7 +43,7 @@ pipeline {
                 //构建
                 stage("Build"){
                     steps{
-                        timeout(time:20, unit:"MINUTES"){
+                        //timeout(time:20, unit:"MINUTES"){
                             script{
                                 println('应用打包')
                                 tools.PrintMes("应用打包",'blue')
@@ -59,7 +59,7 @@ pipeline {
                 //代码扫描
                 stage("CodeScan"){
                     steps{
-                        timeout(time:30, unit:"MINUTES"){
+                        //timeout(time:30, unit:"MINUTES"){
                             script{
                                 print("代码扫描")
                                 tools.PrintMes("代码扫描",'green')
