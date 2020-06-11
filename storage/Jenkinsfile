@@ -31,7 +31,7 @@ pipeline {
             }
         }
     }
-        stage("Project Pakeges"){
+        stages("Project Pakeges"){
             failFast true
             parallel {
 
