@@ -1,5 +1,5 @@
 #!groovy
-@Library'jenkins-devops' _
+@Library('jenkins-devops') _
 def tools = new org.devops.tools()
 //Hello ()
 pipeline {
