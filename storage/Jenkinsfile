@@ -29,9 +29,9 @@ pipeline {
                     }
                 }
             }
-        }
+        }   
     }
-        stages("Project Pakeges"){
+        stage("Project Pakeges"){
             failFast true
             parallel {
 
@@ -62,7 +62,9 @@ pipeline {
                 }
             }
         }
-    //End of construction information
+
+    } 
+       //End of construction information
     post {
         always {
             script{
