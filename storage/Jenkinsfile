@@ -27,7 +27,7 @@ pipeline {
                     script{ 
                         //println('Download Code')
                         tools.PrintMes('Download Code','blue')
-                        checkout([$class: 'GitSCM', branches: [[name: '${banrchName}']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '9893232c-8de8-4c80-9168-60d1d20b7256', url: "${srcUrl}"]]])
+                        checkout([$class: 'GitSCM', branches: [[name: "${banrchName}"]], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '9893232c-8de8-4c80-9168-60d1d20b7256', url: "${srcUrl}"]]])
                     }
                 }
             }
