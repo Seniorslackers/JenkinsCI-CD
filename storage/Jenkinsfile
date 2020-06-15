@@ -3,7 +3,8 @@
 def tools = new org.devops.tools()
 
 String workspace = "/opt/jenkins/workspace"
-
+String srcUrl = "${env.srcUrl}"
+String branchName == "${env.branchName}"
 //Pipeline Start
 pipeline {
     agent { node {  label "master"   
@@ -26,6 +27,7 @@ pipeline {
                     script{ 
                         //println('Download Code')
                         tools.PrintMes('Download Code','blue')
+                        checkout([$class: 'GitSCM', branches: [[name: '${banrchName}']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '9893232c-8de8-4c80-9168-60d1d20b7256', url: "${srcUrl}"]]])
                     }
                 }
             }
