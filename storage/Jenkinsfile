@@ -2,13 +2,13 @@
 @Library("jenkinsLibrary@master") _
 def tools = new org.devops.tools()
 
-String workspace = "/opt/jenkins/workspace"
+//String workspace = "/opt/jenkins/workspace"
 String srcUrl = "${env.srcUrl}"
 String branchName = "${env.branchName}"
 //Pipeline Start
 pipeline {
     agent { node {  label "master"   
-                    customWorkspace "${workspace}"   
+                    //customWorkspace "${workspace}"   
             }
     }
 
