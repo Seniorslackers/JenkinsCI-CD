@@ -1,6 +1,8 @@
 #!groovy
 @Library("jenkinsLibrary@master") _
+
 def tools = new org.devops.tools()
+def build = new org.devops.build()
 
 String workspace = "/opt/jenkins/workspace"
 String srcUrl = "${env.srcUrl}"
@@ -41,12 +43,10 @@ pipeline {
                     steps{
                         timeout(time:20, unit:"MINUTES"){
                             script{
-                                //println('Project Pakeges')
-                                tools.PrintMes("Project Pakege",'green')
-                                // mvnHome = tool "m2"
-                                //println(mvnHome)
+                                Build.Build(buildType,buildShell)
                                 
-                                //sh "${mvnHome}/bin/mvn --version"
+                                tools.PrintMes("Project Pakege",'green')
+                               
                             }
                         }
                     }
