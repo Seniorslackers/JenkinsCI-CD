@@ -10,7 +10,7 @@ String branchName = "${env.branchName}"
 //Pipeline Start
 pipeline {
     agent { node {  label "master"   
-                    customWorkspace "${workspace}"   
+                    //customWorkspace "${workspace}"   
             }
     }
 
@@ -44,7 +44,7 @@ pipeline {
                         timeout(time:20, unit:"MINUTES"){
                             script{
                                 Build.Build(buildType,buildShell)
-                                
+
                                 tools.PrintMes("Project Pakege",'green')
                                
                             }
