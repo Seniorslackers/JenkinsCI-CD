@@ -5,6 +5,7 @@ def tools = new org.devops.tools()
 def build = new org.devops.build()
 
 String workspace = "/opt/jenkins/workspace"
+String buildType = "${env.buildType}"
 String srcUrl = "${env.srcUrl}"
 String branchName = "${env.branchName}"
 //Pipeline Start
